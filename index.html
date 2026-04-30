@@ -331,6 +331,18 @@
       flex-wrap: wrap;
       gap: 6px;
     }
+    .case-screenshot {
+      margin-top: 4px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
+    }
+    .case-screenshot img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
     .stack span {
       font-family: var(--mono);
       font-size: 12px;
@@ -620,6 +632,13 @@
             </div>
           </div>
 
+          <div class="case-section">
+            <div class="case-section-label">Архитектура</div>
+            <div class="case-screenshot">
+              <img src="case1-workflow.png" alt="Workflow AI-консультанта в n8n" loading="lazy">
+            </div>
+          </div>
+          
           <div class="case-options">
             <div class="case-options-title">Опции к базовому тарифу</div>
             <ul>
