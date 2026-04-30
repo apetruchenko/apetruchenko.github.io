@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Демо: AI-квалификатор заявок — apetruchenko</title>
+  <meta name="description" content="Демо-форма AI-квалификатора лидов. Оставьте тестовую заявку и увидите как AI её обработает.">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%235e6ad2'/><text x='50' y='70' font-size='60' font-weight='700' text-anchor='middle' fill='white' font-family='monospace'>A</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-elevated: #111111;
+      --bg-card: #141414;
+      --border: #1f1f1f;
+      --border-bright: #2a2a2a;
+      --text: #ededed;
+      --text-dim: #8a8a8a;
+      --text-muted: #606060;
+      --accent: #5e6ad2;
+      --accent-bright: #7a86e0;
+      --green: #4ade80;
+      --red: #f87171;
+      --mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .logo::before {
+      content: "▸ ";
+      color: var(--accent);
+    }
+    .back-link {
+      font-size: 14px;
+      color: var(--text-dim);
+      transition: color 0.2s;
+    }
+    .back-link:hover {
+      color: var(--text);
+    }
+
+    /* Container */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* Hero */
+    .demo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-bright);
+      border-radius: 999px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+    .demo-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 8px var(--green);
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .lead {
+      font-size: 16px;
+      color: var(--text-dim);
+      margin-bottom: 32px;
+      max-width: 560px;
+    }
+
+    /* How it works box */
+    .info-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+    .info-box-title {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-bright);
+      margin-bottom: 12px;
+    }
+    .info-box ol {
+      list-style: none;
+      counter-reset: step;
+      display: grid;
+      gap: 8px;
+    }
+    .info-box ol li {
+      counter-increment: step;
+      padding-left: 28px;
+      position: relative;
+      font-size: 14px;
+      color: var(--text-dim);
+    }
+    .info-box ol li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 50%;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Form */
+    form {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 600px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+    .field label {
+      display: block;
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    .field label .required {
+      color: var(--accent-bright);
+      margin-left: 2px;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      padding: 10px 14px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-bright);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 14px;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: #0d0d0d;
+    }
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: var(--text-muted);
+    }
+    .field textarea {
+      min-height: 100px;
+      resize: vertical;
+      font-family: inherit;
+    }
+    .field select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%238a8a8a' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px 20px;
+      background: var(--text);
+      color: var(--bg);
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.15s;
+      margin-top: 8px;
+    }
+    .submit-btn:hover:not(:disabled) {
+      background: white;
+      transform: translateY(-1px);
+    }
+    .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    /* Status messages */
+    .status {
+      margin-top: 20px;
+      padding: 16px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      display: none;
+    }
+    .status.success {
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      color: var(--green);
+      display: block;
+    }
+    .status.error {
+      background: rgba(248, 113, 113, 0.1);
+      border: 1px solid rgba(248, 113, 113, 0.3);
+      color: var(--red);
+      display: block;
+    }
+    .status-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    /* Footer note */
+    .demo-note {
+      margin-top: 24px;
+      padding: 16px 20px;
+      background: var(--bg-elevated);
+      border: 1px dashed var(--border-bright);
+      border-radius: 10px;
+      font-size: 13px;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+    .demo-note strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* Loader */
+    .spinner {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(0,0,0,0.2);
+      border-top-color: var(--bg);
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      margin-right: 8px;
+      vertical-align: -2px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">apetruchenko</a>
+      <a href="/#cases" class="back-link">← К кейсам</a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="demo-badge">
+      <span class="demo-badge-dot"></span>
+      <span>Live demo · Case 02</span>
+    </div>
+
+    <h1>Демо-форма AI-квалификатора заявок</h1>
+    <p class="lead">
+      Заполните форму как обычный клиент маркетингового агентства.
+      AI обработает заявку за 5-10 секунд и квалифицирует её.
+    </p>
+
+    <div class="info-box">
+      <div class="info-box-title">Что произойдёт</div>
+      <ol>
+        <li>Заявка летит в n8n через webhook</li>
+        <li>Gemini классифицирует: температура, категория, срочность, оценка 1-10</li>
+        <li>Запись попадает в Google Sheets с тегами</li>
+        <li>В Telegram прилетает алерт менеджеру с черновиком ответа</li>
+      </ol>
+    </div>
+
+    <form id="leadForm">
+      <div class="form-row">
+        <div class="field">
+          <label>Имя <span class="required">*</span></label>
+          <input type="text" name="name" required placeholder="Иван Иванов">
+        </div>
+        <div class="field">
+          <label>Email <span class="required">*</span></label>
+          <input type="email" name="email" required placeholder="ivan@company.com">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label>Телефон</label>
+          <input type="text" name="phone" placeholder="+7 999 123 45 67">
+        </div>
+        <div class="field">
+          <label>Компания</label>
+          <input type="text" name="company" placeholder="ООО Рога и копыта">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label>Должность</label>
+          <input type="text" name="position" placeholder="Директор по маркетингу">
+        </div>
+        <div class="field">
+          <label>Бюджет на маркетинг/мес</label>
+          <select name="budget">
+            <option value="не указан">— Не указан —</option>
+            <option value="до 50k">до 50 000 ₽</option>
+            <option value="50-200k">50 000 — 200 000 ₽</option>
+            <option value="200-500k">200 000 — 500 000 ₽</option>
+            <option value="500k+">500 000+ ₽</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Опишите задачу <span class="required">*</span></label>
+        <textarea name="message" required placeholder="Например: нужно настроить performance-маркетинг, текущее агентство сливает бюджет, готовы стартовать в течение недели..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">Отправить заявку</button>
+
+      <div class="status" id="statusMsg"></div>
+    </form>
+
+    <div class="demo-note">
+      <strong>Это демо-стенд.</strong> Реальные заявки сюда отправлять не нужно. Все данные попадают в тестовую таблицу и используются только для демонстрации работы AI-квалификатора. Для обсуждения вашего проекта пишите в Telegram <a href="https://t.me/apetruchenko" style="color: var(--accent-bright);">@apetruchenko</a>.
+    </div>
+
+  </main>
+
+  <script>
+    const WEBHOOK_URL = 'ВСТАВЬ_СЮДА_PRODUCTION_URL';
+
+    const form = document.getElementById('leadForm');
+    const btn = document.getElementById('submitBtn');
+    const status = document.getElementById('statusMsg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner"></span>Отправляем заявку...';
+      status.style.display = 'none';
+      status.className = 'status';
+
+      try {
+        const response = await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          throw new Error('HTTP ' + response.status);
+        }
+
+        status.className = 'status success';
+        status.innerHTML = '<div class="status-title">✓ Заявка принята</div>AI обработал её за несколько секунд. В реальном проекте менеджер уже получил уведомление в Telegram с готовым черновиком ответа и приоритетом.';
+        form.reset();
+
+        btn.innerHTML = 'Отправить ещё одну заявку';
+        btn.disabled = false;
+
+      } catch (err) {
+        status.className = 'status error';
+        status.innerHTML = '<div class="status-title">Не удалось отправить</div>Возможно, демо-стенд временно офлайн. Напишите в Telegram <a href="https://t.me/apetruchenko" style="color: var(--accent-bright);">@apetruchenko</a> — посмотрим что произошло.';
+
+        btn.innerHTML = 'Попробовать ещё раз';
+        btn.disabled = false;
+      }
+    });
+  </script>
+
+</body>
+</html>
