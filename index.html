@@ -666,36 +666,73 @@
 
         <!-- CASE 2 -->
         <div class="case">
-          <div class="case-status soon">● В разработке</div>
-          <div class="case-tag">CASE / 02 — Обработка заявок</div>
-          <h3>AI-квалификатор входящих заявок с интеграцией CRM</h3>
+          <div class="case-status live">● Live demo</div>
+          <div class="case-tag">CASE / 02 — AI-квалификация заявок</div>
+          <h3>AI-квалификатор входящих заявок для B2B-агентства</h3>
 
           <div class="case-section">
-            <div class="case-section-label">О чём кейс</div>
-            <p>Заявка с сайта → GPT определяет горячий/тёплый/холодный лид, бюджет, продукт, срочность → запись в Airtable с тегами → уведомление менеджеру с готовым черновиком ответа.</p>
+            <div class="case-section-label">Задача</div>
+            <p>Менеджер агентства тратит 2-3 часа в день на сортировку заявок: горячие лиды, тёплые, мусор. Пока добирается до серьёзных клиентов — конкуренты уже отзвонились. Деньги утекают.</p>
+          </div>
+
+          <div class="case-section">
+            <div class="case-section-label">Решение</div>
+            <p>Заявка с сайта → AI квалифицирует за 5 секунд: температура (горячий/тёплый/холодный), категория услуги, срочность, оценка от 1 до 10 → запись в Google Sheets с тегами → Telegram-алерт менеджеру с готовым черновиком ответа.</p>
+          </div>
+
+          <div class="case-section">
+            <div class="case-section-label">Что получает клиент</div>
+            <ul class="case-features">
+              <li>Менеджер видит горячих лидов сразу — не пропускает деньги</li>
+              <li>Все заявки в Sheets с тегами — удобно фильтровать и анализировать</li>
+              <li>Готовые черновики ответов экономят 5-10 минут на каждый ответ</li>
+              <li>Деловой тон писем без воды — клиент видит профессионала</li>
+            </ul>
           </div>
 
           <div class="case-section">
             <div class="case-section-label">Стек</div>
             <div class="stack">
               <span>n8n</span>
-              <span>OpenAI / Gemini</span>
+              <span>Google Gemini</span>
               <span>Google Sheets</span>
+              <span>Telegram Bot API</span>
               <span>Webhook</span>
-              <span>Telegram</span>
             </div>
+          </div>
+
+          <div class="case-section">
+            <div class="case-section-label">Архитектура</div>
+            <div class="case-screenshot">
+              <img src="case2-workflow.png" alt="Workflow AI-квалификатора в n8n" loading="lazy">
+            </div>
+          </div>
+
+          <div class="case-options">
+            <div class="case-options-title">Опции к базовому тарифу</div>
+            <ul>
+              <li>Версия с Airtable вместо Sheets (Канбан, представления) <span>+2 000 ₽</span></li>
+              <li>Email-рассылка автоответа клиенту <span>+1 500 ₽</span></li>
+              <li>Дашборд в Google Looker Studio (статистика по лидам) <span>+3 000 ₽</span></li>
+              <li>Двухязычная классификация (RU + EN) <span>+1 500 ₽</span></li>
+            </ul>
           </div>
 
           <div class="case-footer">
             <div class="case-meta">
               <div class="case-meta-item">
-                <span class="case-meta-label">Появится:</span>
-                <span class="case-meta-value">в течение недели</span>
+                <span class="case-meta-label">Срок:</span>
+                <span class="case-meta-value">3-5 дней</span>
+              </div>
+              <div class="case-meta-item">
+                <span class="case-meta-label">Стоимость:</span>
+                <span class="case-meta-value price">от 8 000 ₽</span>
               </div>
             </div>
+            <a href="case2-demo.html" class="btn btn-secondary">Открыть демо-форму →</a>
           </div>
         </div>
-
+        
         <!-- CASE 3 -->
         <div class="case">
           <div class="case-status soon">● В разработке</div>
