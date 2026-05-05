@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Артём Петрученко — AI-автоматизации и интеграции</title>
+  <title>Artem Petruchenko — AI automations and integrations</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0a0a'/><text x='50' y='72' font-size='65' text-anchor='middle' fill='%235e6ad2'>▸</text></svg>">
-  <meta name="description" content="AI-автоматизации, интеграции и боты. Кейсы: квалификатор лидов, RAG-консультант по базе знаний, генерация SEO-контента. Стек: n8n, AI, Supabase Vector, Telegram, Sheets, CRM.">
+  <meta name="description" content="AI automations, integrations and bots. Cases: lead qualifier, RAG knowledge-base assistant, SEO content generator. Stack: n8n, AI, Supabase Vector, Telegram, Sheets, CRM.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -236,46 +236,6 @@
       margin-bottom: 48px;
     }
 
-    /* Services grid */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
-    .service-card {
-      padding: 24px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      transition: border-color 0.2s;
-    }
-    .service-card:hover {
-      border-color: var(--border-bright);
-    }
-    .service-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, var(--accent), #8b5cf6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-      font-family: var(--mono);
-      font-size: 18px;
-      font-weight: 600;
-    }
-    .service-card h3 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .service-card p {
-      font-size: 14px;
-      color: var(--text-dim);
-      line-height: 1.5;
-    }
-
     /* Cases */
     .case {
       background: var(--bg-card);
@@ -301,11 +261,6 @@
       background: rgba(74, 222, 128, 0.1);
       color: var(--green);
       border: 1px solid rgba(74, 222, 128, 0.3);
-    }
-    .case-status.soon {
-      background: rgba(250, 204, 21, 0.1);
-      color: var(--yellow);
-      border: 1px solid rgba(250, 204, 21, 0.3);
     }
     .case-tag {
       font-family: var(--mono);
@@ -381,69 +336,8 @@
       padding-top: 24px;
       border-top: 1px solid var(--border);
     }
-    .case-meta {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-    .case-meta-item {
-      font-size: 14px;
-    }
-    .case-meta-label {
-      color: var(--text-muted);
-      font-size: 12px;
-      margin-right: 4px;
-    }
-    .case-meta-value {
-      color: var(--text);
-      font-weight: 500;
-    }
-    .price {
-      color: var(--accent-bright);
-      font-family: var(--mono);
-      font-weight: 500;
-    }
-    .case-options {
-      margin-top: 16px;
-      padding: 16px;
-      background: var(--bg-elevated);
-      border-radius: 8px;
-      border: 1px solid var(--border);
-    }
-    .case-options-title {
-      font-size: 13px;
-      color: var(--text-dim);
-      margin-bottom: 8px;
-      font-weight: 500;
-    }
-    .case-options ul {
-      list-style: none;
-      display: grid;
-      gap: 4px;
-    }
-    .case-options li {
-      font-size: 13px;
-      color: var(--text-dim);
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-    }
-    .case-options li span {
-      font-family: var(--mono);
-      color: var(--text-muted);
-      white-space: nowrap;
-    }
 
-    /* About — переработан под подход к работе */
-    .about-intro {
-      font-size: 18px;
-      color: var(--text);
-      max-width: 640px;
-      margin-bottom: 40px;
-      line-height: 1.5;
-    }
-
-    /* About me — короткий нарратив сразу под hero */
+    /* About me */
     .about-text {
       max-width: 640px;
     }
@@ -456,6 +350,8 @@
     .about-text p:last-child {
       margin-bottom: 0;
     }
+
+    /* Approach */
     .principles {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -489,14 +385,6 @@
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 12px;
-    }
-    .stack-block-title {
-      font-family: var(--mono);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 16px;
     }
     .stack-block .stack {
       gap: 8px;
@@ -556,13 +444,13 @@
       <a href="#" class="logo">apetruchenko</a>
       <div class="header-right">
         <nav>
-          <a href="#about-me">О себе</a>
-          <a href="#cases">Кейсы</a>
-          <a href="#about">Подход</a>
-          <a href="#stack">Стек</a>
-          <a href="#contacts">Контакты</a>
+          <a href="#about-me">About</a>
+          <a href="#cases">Cases</a>
+          <a href="#about">Approach</a>
+          <a href="#stack">Stack</a>
+          <a href="#contacts">Contact</a>
         </nav>
-        <a href="en/index.html" class="lang-switch">EN</a>
+        <a href="../index.html" class="lang-switch">RU</a>
       </div>
     </div>
   </header>
@@ -574,17 +462,17 @@
       <div class="container hero-inner">
         <div class="badge">
           <span class="badge-dot"></span>
-          <span>Открыт к работе</span>
+          <span>Open to work</span>
         </div>
         <h1>
-          Артём Петрученко<br>
-          AI-автоматизации, интеграции, <span class="accent">боты</span>
+          Artem Petruchenko<br>
+          AI automations, integrations, <span class="accent">bots</span>
         </h1>
         <p class="hero-sub">
-          Автоматизирую процессы, где много ручной рутины: квалификация лидов, RAG-консультанты по базе знаний, SEO/контент, связки CRM с мессенджерами. Меньше ручных операций - больше времени у команды на содержательную работу.
+          I automate operational processes where teams spend time on repetitive work: qualifying leads, answering from a knowledge base, generating content, connecting CRM with messengers. Less routine, more bandwidth for the team.
         </p>
         <div class="cta-row">
-          <a href="#cases" class="btn btn-primary">Посмотреть кейсы →</a>
+          <a href="#cases" class="btn btn-primary">See cases →</a>
         </div>
       </div>
     </section>
@@ -592,12 +480,12 @@
     <!-- ABOUT ME -->
     <section id="about-me">
       <div class="container">
-        <div class="section-label">О себе</div>
-        <h2>Кратко</h2>
+        <div class="section-label">About</div>
+        <h2>Background</h2>
         <div class="about-text">
-          <p>Пришёл в AI-автоматизации из маркетинга - вёл digital и SEO до того как переключился на AI. Операционная часть бизнеса знакомая территория, не сбоку.</p>
-          <p>Сейчас собираю связки AI + n8n + базы знаний под конкретные задачи команды: квалификация заявок, ответы клиентам, генерация контента, интеграции. Не «технически работает», а решает задачу с которой пришли.</p>
-          <p>Ищу постоянную работу в продуктовой команде. Открыт к контракту.</p>
+          <p>I came to AI automations from a marketing background — running digital and SEO before switching focus to AI. The operational side of business is familiar territory.</p>
+          <p>Now I build AI + n8n + knowledge-base setups for specific team needs: lead qualification, customer answers, content generation, integrations. Not just "technically working", but actually solving the problem teams come with.</p>
+          <p>Looking for a full-time role on a product team. Open to contract.</p>
         </div>
       </div>
     </section>
@@ -605,38 +493,38 @@
     <!-- CASES -->
     <section id="cases">
       <div class="container">
-        <div class="section-label">Портфолио</div>
-        <h2>Кейсы</h2>
-        <p class="section-sub">Три рабочих кейса с live-демо и архитектурой workflow. Каждый собран как полноценная связка AI с операционкой.</p>
+        <div class="section-label">Portfolio</div>
+        <h2>Cases</h2>
+        <p class="section-sub">Three working cases with live demos and workflow architecture. Each one is a full AI-to-operations setup, not a toy demo.</p>
 
         <!-- CASE 1 -->
         <div class="case">
           <div class="case-status live">● Live demo</div>
-          <div class="case-tag">CASE / 01 — AI-квалификация заявок</div>
-          <h3>AI-квалификатор входящих заявок для digital-агентства</h3>
+          <div class="case-tag">CASE / 01 — AI lead qualifier</div>
+          <h3>AI lead qualifier for inbound requests</h3>
 
           <div class="case-section">
-            <div class="case-section-label">Задача</div>
-            <p>В digital-агентство приходят заявки в формате “нужен сайт”, “хотим SEO”, “запустите рекламу”. Менеджеру приходится вручную вытаскивать задачу, бюджет, сроки, нишу и срочность перед созвоном.</p>
+            <div class="case-section-label">Problem</div>
+            <p>Inbound leads come in vague: "we need a website", "want SEO", "run ads for us". Sales has to manually pull out the actual task, budget, timeline, niche and urgency before each call.</p>
           </div>
 
           <div class="case-section">
-            <div class="case-section-label">Решение</div>
-            <p>Заявка с сайта или формы → AI уточняет вводные и квалифицирует лид: услуга, бюджет, сроки, ниша, срочность, приоритет → запись в Google Sheets/CRM → Telegram-алерт менеджеру со структурированной карточкой и черновиком ответа.</p>
+            <div class="case-section-label">Solution</div>
+            <p>A request from the website or form → AI clarifies the brief and qualifies the lead: service, budget, timeline, niche, urgency, priority → record in Google Sheets/CRM → Telegram alert to the manager with a structured card and a draft reply.</p>
           </div>
 
           <div class="case-section">
-            <div class="case-section-label">Что получает клиент</div>
+            <div class="case-section-label">What the client gets</div>
             <ul class="case-features">
-              <li>Менеджер видит приоритет заявки до созвона</li>
-              <li>Все лиды в Sheets/CRM с тегами по услуге, бюджету и срочности</li>
-              <li>Готовый черновик ответа помогает быстрее продолжить диалог</li>
-              <li>Слабые и нерелевантные заявки проще отфильтровать без ручного разбора</li>
+              <li>The manager sees lead priority before the call</li>
+              <li>All leads in Sheets/CRM tagged by service, budget, urgency</li>
+              <li>A draft reply helps continue the conversation faster</li>
+              <li>Weak and irrelevant leads are easy to filter out without manual review</li>
             </ul>
           </div>
 
           <div class="case-section">
-            <div class="case-section-label">Стек</div>
+            <div class="case-section-label">Stack</div>
             <div class="stack">
               <span>n8n</span>
               <span>Groq</span>
@@ -647,45 +535,45 @@
           </div>
 
           <div class="case-section">
-            <div class="case-section-label">Архитектура</div>
+            <div class="case-section-label">Architecture</div>
             <div class="case-screenshot">
-              <img src="case2-workflow.png" alt="Workflow AI-квалификатора в n8n" loading="lazy">
+              <img src="../case2-workflow.png" alt="AI lead qualifier workflow in n8n" loading="lazy">
             </div>
           </div>
 
           <div class="case-footer">
-            <a href="case2-demo.html" class="btn btn-secondary">Открыть демо-форму →</a>
+            <a href="../case2-demo.html" class="btn btn-secondary">Open demo form →</a>
           </div>
         </div>
 
         <!-- CASE 2 -->
         <div class="case">
           <div class="case-status live">● Live demo</div>
-          <div class="case-tag">CASE / 02 — AI-консультант по услугам</div>
-          <h3>AI-консультант по услугам маркетингового агентства</h3>
+          <div class="case-tag">CASE / 02 — AI knowledge-base assistant</div>
+          <h3>AI assistant answering from a knowledge base</h3>
 
           <div class="case-section">
-            <div class="case-section-label">Задача</div>
-            <p>Потенциальные клиенты агентства часто не понимают, что им нужно: SEO, контекст, SMM, сайт или комплексная стратегия. До созвона менеджер отвечает на похожие вопросы и вручную направляет человека к нужной услуге.</p>
+            <div class="case-section-label">Problem</div>
+            <p>Potential clients often don't know what they need: SEO, ads, social, a website, or full strategy. Before any call, a sales manager keeps answering the same questions and routes people to the right service by hand.</p>
           </div>
 
           <div class="case-section">
-            <div class="case-section-label">Решение</div>
-            <p>Telegram-бот с RAG-системой. Описания услуг, FAQ, кейсы и условия агентства загружаются в базу знаний — бот отвечает на вопросы, помогает выбрать направление и передает сложные запросы менеджеру.</p>
+            <div class="case-section-label">Solution</div>
+            <p>A Telegram bot with RAG. Service descriptions, FAQ, cases and conditions are loaded into a knowledge base — the bot answers questions, helps choose a direction, and escalates non-standard requests to a human.</p>
           </div>
 
           <div class="case-section">
-            <div class="case-section-label">Что умеет консультант</div>
+            <div class="case-section-label">What it does</div>
             <ul class="case-features">
-              <li>Отвечает по базе услуг агентства — без выдуманных условий</li>
-              <li>Помнит контекст диалога с потенциальным клиентом</li>
-              <li>Объединяет данные из FAQ, кейсов, тарифов и описаний услуг</li>
-              <li>Честно говорит “не знаю” и направляет к менеджеру</li>
+              <li>Answers from the actual knowledge base — no made-up conditions</li>
+              <li>Keeps context across the conversation</li>
+              <li>Combines data from FAQ, cases, pricing and service descriptions</li>
+              <li>Honestly says "don't know" and routes to a human</li>
             </ul>
           </div>
 
           <div class="case-section">
-            <div class="case-section-label">Стек</div>
+            <div class="case-section-label">Stack</div>
             <div class="stack">
               <span>n8n</span>
               <span>Google Gemini</span>
@@ -695,14 +583,14 @@
           </div>
 
           <div class="case-section">
-            <div class="case-section-label">Архитектура</div>
+            <div class="case-section-label">Architecture</div>
             <div class="case-screenshot">
-              <img src="case1-workflow.png" alt="Workflow AI-консультанта в n8n" loading="lazy">
+              <img src="../case1-workflow.png" alt="AI knowledge-base assistant workflow in n8n" loading="lazy">
             </div>
           </div>
 
           <div class="case-footer">
-            <a href="https://t.me/aischool_demo_bot" target="_blank" class="btn btn-secondary">Открыть демо-бот →</a>
+            <a href="https://t.me/aischool_demo_bot" target="_blank" class="btn btn-secondary">Open demo bot →</a>
           </div>
         </div>
 
@@ -710,32 +598,32 @@
         <!-- CASE 3 -->
         <div class="case">
           <div class="case-status live">● Live demo</div>
-          <div class="case-tag">CASE / 03 — AI-генерация SEO-контента</div>
-          <h3>AI-помощник для SEO/content-команд</h3>
+          <div class="case-tag">CASE / 03 — AI SEO content generator</div>
+          <h3>AI assistant for SEO and content teams</h3>
 
           <div class="case-section">
-            <div class="case-section-label">Задача</div>
-            <p>SEO и content-командам нужно быстро готовить ТЗ, структуры, title/meta и первые черновики под список ключей. Ручная подготовка каждой заготовки занимает время редактора и тормозит производство контента.</p>
+            <div class="case-section-label">Problem</div>
+            <p>SEO and content teams need to quickly produce briefs, structures, title/meta and first drafts for a list of keywords. Preparing each starter manually eats editor time and slows down content production.</p>
           </div>
 
           <div class="case-section">
-            <div class="case-section-label">Решение</div>
-            <p>Список ключевых фраз в Google Sheets → workflow по расписанию или кнопке готовит title, meta description, H1, структуру, тезисы и первый markdown-драфт → записывает результат обратно в таблицу → присылает дайджест в Telegram.</p>
+            <div class="case-section-label">Solution</div>
+            <p>List of keywords in Google Sheets → workflow on schedule or on click prepares title, meta description, H1, structure, key points and a first markdown draft → writes the result back to the sheet → sends a digest to Telegram.</p>
           </div>
 
           <div class="case-section">
-            <div class="case-section-label">Что получает SEO/content-команда</div>
+            <div class="case-section-label">What the SEO/content team gets</div>
             <ul class="case-features">
-              <li>Структура материала под ключ и тип интента: guide, explainer, comparison или list</li>
-              <li>SEO-заготовки: title, meta description, H1 и основные H2</li>
-              <li>Первый драфт, который редактор может доработать, а не писать с нуля</li>
-              <li>Структурные блоки: таблицы сравнений, списки плюсов/минусов, пошаговые планы</li>
-              <li>Промпт можно настроить под нишу, tone of voice и правила редакции</li>
+              <li>Article structure based on keyword and intent: guide, explainer, comparison or list</li>
+              <li>SEO starters: title, meta description, H1 and main H2s</li>
+              <li>A first draft the editor can polish, instead of writing from scratch</li>
+              <li>Structural blocks: comparison tables, pros/cons lists, step-by-step plans</li>
+              <li>The prompt can be tuned to niche, tone of voice and editorial rules</li>
             </ul>
           </div>
 
           <div class="case-section">
-            <div class="case-section-label">Стек</div>
+            <div class="case-section-label">Stack</div>
             <div class="stack">
               <span>n8n</span>
               <span>OpenRouter</span>
@@ -745,14 +633,14 @@
           </div>
 
           <div class="case-section">
-            <div class="case-section-label">Архитектура</div>
+            <div class="case-section-label">Architecture</div>
             <div class="case-screenshot">
-              <img src="case3-workflow.png" alt="Workflow AI-генератора SEO-статей в n8n" loading="lazy">
+              <img src="../case3-workflow.png" alt="AI SEO content generator workflow in n8n" loading="lazy">
             </div>
           </div>
 
           <div class="case-footer">
-            <a href="https://docs.google.com/spreadsheets/d/1c0SFu9ZkLX8KA5w7B8t_GhGva0mlBtP5ZUQJKpX10mY/edit?usp=sharing" target="_blank" class="btn btn-secondary">Открыть таблицу со статьями →</a>
+            <a href="https://docs.google.com/spreadsheets/d/1c0SFu9ZkLX8KA5w7B8t_GhGva0mlBtP5ZUQJKpX10mY/edit?usp=sharing" target="_blank" class="btn btn-secondary">Open the article spreadsheet →</a>
           </div>
         </div>
 
@@ -762,32 +650,32 @@
     <!-- APPROACH -->
     <section id="about">
       <div class="container">
-        <div class="section-label">Подход</div>
-        <h2>Как я работаю</h2>
+        <div class="section-label">Approach</div>
+        <h2>How I work</h2>
 
         <div class="principles">
           <div class="principle">
             <div class="principle-num">01</div>
-            <h3>Документирую то, что делаю</h3>
-            <p>Каждый workflow с короткой инструкцией. Через месяц можно открыть и понять, что и зачем. Без этого автоматизация умирает первой же сменой человека в команде.</p>
+            <h3>Document what I build</h3>
+            <p>Every workflow comes with a short readme. A month later, anyone can open it and figure out what runs and why. Without that, automation dies the first time someone leaves the team.</p>
           </div>
 
           <div class="principle">
             <div class="principle-num">02</div>
-            <h3>Прозрачен с границами</h3>
-            <p>Если задача за пределами компетенции - говорю прямо. Лучше пас на старте, чем сделать криво и подвести команду в середине.</p>
+            <h3>Honest about boundaries</h3>
+            <p>If a task is outside my expertise, I say so upfront. Better to pass at the start than build something flawed and let the team down halfway through.</p>
           </div>
 
           <div class="principle">
             <div class="principle-num">03</div>
-            <h3>Прототип раньше архитектуры</h3>
-            <p>Сначала рабочий минимум на реальных данных, потом усложнение. Не строю красивую архитектуру под задачу, которую ещё не понял.</p>
+            <h3>Prototype before architecture</h3>
+            <p>Working minimum on real data first, then complexity. I don't design clean architecture for a problem I haven't fully understood yet.</p>
           </div>
 
           <div class="principle">
             <div class="principle-num">04</div>
-            <h3>Тестирую на реальных кейсах</h3>
-            <p>Не «технически работает», а решает задачу с которой пришли. Прогоняю на реальных данных, разбираю что сломалось.</p>
+            <h3>Test on real cases</h3>
+            <p>Not "technically works", but actually solves the problem teams come with. I run on real data, debug what breaks.</p>
           </div>
         </div>
       </div>
@@ -796,8 +684,8 @@
     <!-- STACK -->
     <section id="stack">
       <div class="container">
-        <div class="section-label">Стек</div>
-        <h2>Инструменты</h2>
+        <div class="section-label">Stack</div>
+        <h2>Tools</h2>
 
         <div class="stack-block">
           <div class="stack">
@@ -824,10 +712,10 @@
     <section id="contacts">
       <div class="container">
         <div class="contacts">
-          <h2>Связаться</h2>
-          <p>Telegram или email - отвечаю обычно в течение дня.</p>
+          <h2>Get in touch</h2>
+          <p>Telegram or email — usually reply within a day.</p>
           <div class="contact-links">
-            <a href="https://t.me/apetruchenko" target="_blank" class="btn btn-primary">Написать в Telegram →</a>
+            <a href="https://t.me/apetruchenko" target="_blank" class="btn btn-primary">Message on Telegram →</a>
             <a href="mailto:apetruchenko.work@gmail.com" class="btn btn-secondary">apetruchenko.work@gmail.com</a>
           </div>
         </div>
