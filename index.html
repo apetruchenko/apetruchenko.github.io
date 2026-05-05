@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Артём Петрученко — AI-автоматизации для маркетинговых агентств</title>
+  <title>Артём Петрученко — AI-автоматизации и интеграции</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0a0a'/><text x='50' y='72' font-size='65' text-anchor='middle' fill='%235e6ad2'>▸</text></svg>">
-  <meta name="description" content="AI-автоматизации для маркетинговых агентств: квалификация заявок, сбор брифов, уведомления менеджерам, SEO/контент-процессы и интеграции n8n с CRM, Sheets и Telegram.">
+  <meta name="description" content="AI-автоматизации, интеграции и боты. Кейсы: квалификатор лидов, RAG-консультант по базе знаний, генерация SEO-контента. Стек: n8n, AI, Supabase Vector, Telegram, Sheets, CRM.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -423,6 +423,20 @@
       margin-bottom: 40px;
       line-height: 1.5;
     }
+
+    /* About me — короткий нарратив сразу под hero */
+    .about-text {
+      max-width: 640px;
+    }
+    .about-text p {
+      font-size: 17px;
+      color: var(--text);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
     .principles {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -522,9 +536,10 @@
     <div class="header-inner">
       <a href="#" class="logo">apetruchenko</a>
       <nav>
-        <a href="#services">Услуги</a>
+        <a href="#about-me">О себе</a>
         <a href="#cases">Кейсы</a>
         <a href="#about">Подход</a>
+        <a href="#stack">Стек</a>
         <a href="#contacts">Контакты</a>
       </nav>
     </div>
@@ -537,16 +552,14 @@
       <div class="container hero-inner">
         <div class="badge">
           <span class="badge-dot"></span>
-          <span>Открыт к проектам</span>
+          <span>Открыт к работе</span>
         </div>
         <h1>
-          AI-автоматизации<br>
-          для <span class="accent">маркетинговых агентств</span>
+          Артём Петрученко<br>
+          AI-автоматизации, интеграции, <span class="accent">боты</span>
         </h1>
         <p class="hero-sub">
-          Помогаю быстрее разбирать входящие заявки, собирать брифы,
-          уведомлять менеджеров и ускорять SEO/контент-процессы.
-          Стек: n8n + AI + Sheets/CRM + Telegram.
+          Автоматизирую процессы, где много ручной рутины: квалификация лидов, RAG-консультанты по базе знаний, SEO/контент, связки CRM с мессенджерами. Меньше ручных операций - больше времени у команды на содержательную работу.
         </p>
         <div class="cta-row">
           <a href="#cases" class="btn btn-primary">Посмотреть кейсы →</a>
@@ -554,37 +567,15 @@
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services">
+    <!-- ABOUT ME -->
+    <section id="about-me">
       <div class="container">
-        <div class="section-label">Услуги</div>
-        <h2>Что я делаю</h2>
-        <p class="section-sub">Автоматизирую рутину вокруг лидов, брифов, отчетов и контента. Подключаюсь к текущим формам, таблицам, CRM и Telegram.</p>
-
-        <div class="services">
-          <div class="service-card">
-            <div class="service-icon">L</div>
-            <h3>AI-квалификация заявок</h3>
-            <p>Форма или сообщение клиента → уточнение задачи, бюджета, сроков и ниши → карточка лида в Sheets/CRM → Telegram-уведомление менеджеру.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">A</div>
-            <h3>AI-консультант по услугам агентства</h3>
-            <p>Бот отвечает по базе услуг, помогает выбрать SEO, рекламу, SMM или разработку и передает нестандартные вопросы человеку.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">C</div>
-            <h3>SEO/контент-автоматизации</h3>
-            <p>ТЗ, структуры, title/meta, черновики статей и дайджесты из таблицы ключей. Фокус — ускорить первый драфт для редактора.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">I</div>
-            <h3>Интеграции CRM, таблиц и Telegram</h3>
-            <p>Связываю формы, CRM, Google Sheets, Airtable, Notion и мессенджеры в один поток данных через n8n.</p>
-          </div>
+        <div class="section-label">О себе</div>
+        <h2>Кратко</h2>
+        <div class="about-text">
+          <p>Пришёл в AI-автоматизации из маркетинга - вёл digital и SEO до того как переключился на AI. Операционная часть бизнеса знакомая территория, не сбоку.</p>
+          <p>Сейчас собираю связки AI + n8n + базы знаний под конкретные задачи команды: квалификация заявок, ответы клиентам, генерация контента, интеграции. Не «технически работает», а решает задачу с которой пришли.</p>
+          <p>Ищу постоянную работу в продуктовой команде. Открыт к контракту.</p>
         </div>
       </div>
     </section>
@@ -594,7 +585,7 @@
       <div class="container">
         <div class="section-label">Портфолио</div>
         <h2>Кейсы</h2>
-        <p class="section-sub">Те же рабочие демо, но упакованные под маркетинговую операционку: заявки, брифы, услуги агентства и SEO-контент.</p>
+        <p class="section-sub">Три рабочих кейса с live-демо и архитектурой workflow. Каждый собран как полноценная связка AI с операционкой.</p>
 
         <!-- CASE 1 -->
         <div class="case">
@@ -640,27 +631,7 @@
             </div>
           </div>
 
-          <div class="case-options">
-            <div class="case-options-title">Опции к базовому тарифу</div>
-            <ul>
-              <li>Версия с Airtable вместо Sheets (Канбан, представления) <span>+2 000 ₽</span></li>
-              <li>Email-рассылка автоответа клиенту <span>+1 500 ₽</span></li>
-              <li>Дашборд в Google Looker Studio (статистика по лидам) <span>+3 000 ₽</span></li>
-              <li>Двухязычная классификация (RU + EN) <span>+1 500 ₽</span></li>
-            </ul>
-          </div>
-
           <div class="case-footer">
-            <div class="case-meta">
-              <div class="case-meta-item">
-                <span class="case-meta-label">Срок:</span>
-                <span class="case-meta-value">3-5 дней</span>
-              </div>
-              <div class="case-meta-item">
-                <span class="case-meta-label">Стоимость:</span>
-                <span class="case-meta-value price">от 8 000 ₽</span>
-              </div>
-            </div>
             <a href="case2-demo.html" class="btn btn-secondary">Открыть демо-форму →</a>
           </div>
         </div>
@@ -708,27 +679,7 @@
             </div>
           </div>
 
-          <div class="case-options">
-            <div class="case-options-title">Опции к базовому тарифу</div>
-            <ul>
-              <li>Эскалация менеджеру в реальном времени <span>+1 500 ₽</span></li>
-              <li>Логирование диалогов в Google Sheets <span>+1 000 ₽</span></li>
-              <li>Голосовые сообщения (Whisper) <span>+2 000 ₽</span></li>
-              <li>Форма для обновления базы клиентом <span>+1 500 ₽</span></li>
-            </ul>
-          </div>
-
           <div class="case-footer">
-            <div class="case-meta">
-              <div class="case-meta-item">
-                <span class="case-meta-label">Срок:</span>
-                <span class="case-meta-value">3 дня</span>
-              </div>
-              <div class="case-meta-item">
-                <span class="case-meta-label">Стоимость:</span>
-                <span class="case-meta-value price">от 5 000 ₽</span>
-              </div>
-            </div>
             <a href="https://t.me/aischool_demo_bot" target="_blank" class="btn btn-secondary">Открыть демо-бот →</a>
           </div>
         </div>
@@ -778,27 +729,7 @@
             </div>
           </div>
 
-          <div class="case-options">
-            <div class="case-options-title">Опции к базовому тарифу</div>
-            <ul>
-              <li>Автопостинг в WordPress через REST API <span>+2 000 ₽</span></li>
-              <li>Генерация изображений к статьям <span>+2 500 ₽</span></li>
-              <li>Multi-niche (несколько проектов в одном workflow) <span>+3 000 ₽</span></li>
-              <li>Внутренняя перелинковка между статьями <span>+1 500 ₽</span></li>
-            </ul>
-          </div>
-
           <div class="case-footer">
-            <div class="case-meta">
-              <div class="case-meta-item">
-                <span class="case-meta-label">Срок:</span>
-                <span class="case-meta-value">3-4 дня</span>
-              </div>
-              <div class="case-meta-item">
-                <span class="case-meta-label">Стоимость:</span>
-                <span class="case-meta-value price">от 7 000 ₽</span>
-              </div>
-            </div>
             <a href="https://docs.google.com/spreadsheets/d/1c0SFu9ZkLX8KA5w7B8t_GhGva0mlBtP5ZUQJKpX10mY/edit?usp=sharing" target="_blank" class="btn btn-secondary">Открыть таблицу со статьями →</a>
           </div>
         </div>
@@ -806,61 +737,51 @@
       </div>
     </section>
 
-    <!-- ABOUT — переработан, теперь про подход к работе -->
+    <!-- APPROACH -->
     <section id="about">
       <div class="container">
         <div class="section-label">Подход</div>
         <h2>Как я работаю</h2>
 
-        <p class="about-intro">
-          Я делаю автоматизации, которые решают конкретную бизнес-задачу — а не просто
-          "технически работают". Без обещаний которые не выполню, без растягивания сроков
-          и без скрытых доплат после старта.
-        </p>
-
         <div class="principles">
           <div class="principle">
             <div class="principle-num">01</div>
-            <h3>Прозрачные сроки и цены</h3>
-            <p>Озвучиваю срок и стоимость до начала работы. Если что-то меняется — обсуждаем заранее, а не ставим перед фактом.</p>
+            <h3>Документирую то, что делаю</h3>
+            <p>Каждый workflow с короткой инструкцией. Через месяц можно открыть и понять, что и зачем. Без этого автоматизация умирает первой же сменой человека в команде.</p>
           </div>
 
           <div class="principle">
             <div class="principle-num">02</div>
-            <h3>Демо до полной оплаты</h3>
-            <p>Сначала собираю рабочий прототип, показываю в действии. Полная оплата — только когда вы видите что система решает задачу.</p>
+            <h3>Прозрачен с границами</h3>
+            <p>Если задача за пределами компетенции - говорю прямо. Лучше пас на старте, чем сделать криво и подвести команду в середине.</p>
           </div>
 
           <div class="principle">
             <div class="principle-num">03</div>
-            <h3>Документация на выходе</h3>
-            <p>Каждый проект сдаётся с короткой инструкцией: как пользоваться, как обновлять данные, что делать если что-то сломалось.</p>
+            <h3>Прототип раньше архитектуры</h3>
+            <p>Сначала рабочий минимум на реальных данных, потом усложнение. Не строю красивую архитектуру под задачу, которую ещё не понял.</p>
           </div>
 
           <div class="principle">
             <div class="principle-num">04</div>
-            <h3>Поддержка после сдачи</h3>
-            <p>Две недели после запуска правлю баги бесплатно. Дальше — по фиксированной ставке за час, без сюрпризов.</p>
-          </div>
-
-          <div class="principle">
-            <div class="principle-num">05</div>
-            <h3>Честно говорю когда не возьмусь</h3>
-            <p>Если задача не подходит под мою экспертизу — сразу скажу. Лучше отказаться, чем сделать криво и подвести.</p>
-          </div>
-
-          <div class="principle">
-            <div class="principle-num">06</div>
-            <h3>Ограниченное число проектов</h3>
-            <p>Беру не больше 3 проектов одновременно. Это позволяет не размазывать внимание и доводить каждую задачу до результата.</p>
+            <h3>Тестирую на реальных кейсах</h3>
+            <p>Не «технически работает», а решает задачу с которой пришли. Прогоняю на реальных данных, разбираю что сломалось.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack">
+      <div class="container">
+        <div class="section-label">Стек</div>
+        <h2>Инструменты</h2>
 
         <div class="stack-block">
-          <div class="stack-block-title">Технический стек</div>
           <div class="stack">
             <span>n8n</span>
             <span>Claude</span>
+            <span>Claude Code</span>
             <span>OpenAI API</span>
             <span>Google Gemini</span>
             <span>Groq</span>
@@ -881,11 +802,11 @@
     <section id="contacts">
       <div class="container">
         <div class="contacts">
-          <h2>Обсудим ваш проект?</h2>
-          <p>Покажу демо и за 10 минут прикину, где автоматизация даст эффект: заявки, брифы, CRM, Telegram или SEO/контент-процессы.</p>
+          <h2>Связаться</h2>
+          <p>Telegram или email - отвечаю обычно в течение дня.</p>
           <div class="contact-links">
             <a href="https://t.me/apetruchenko" target="_blank" class="btn btn-primary">Написать в Telegram →</a>
-            <a href="#" class="btn btn-secondary" onclick="return false;">apetruchenko.work@gmail.com</a>
+            <a href="mailto:apetruchenko.work@gmail.com" class="btn btn-secondary">apetruchenko.work@gmail.com</a>
           </div>
         </div>
       </div>
