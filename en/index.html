@@ -117,14 +117,6 @@
     @media (max-width: 600px) {
       nav { display: none; }
       .header-right { gap: 0; }
-      .case-status {
-        position: static;
-        display: inline-flex;
-        margin-bottom: 12px;
-      }
-      .case h3 {
-        max-width: 100%;
-      }
     }
 
     /* Hero */
@@ -442,6 +434,18 @@
       font-size: 13px;
       color: var(--text-muted);
       font-family: var(--mono);
+    }
+
+    /* Mobile fix for case-status: must come after .case-status to win cascade */
+    @media (max-width: 600px) {
+      .case-status {
+        position: static;
+        display: inline-flex;
+        margin-bottom: 12px;
+      }
+      .case h3 {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
